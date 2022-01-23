@@ -1,0 +1,10 @@
+<div class="grid" %>
+  <%= render "flash" %>
+  <div class="flex">
+    <%= render "input" %>
+
+    <% if @weather %>
+      <%= render "details" %>
+    <% end %>
+  </div>
+</div>

@@ -1,0 +1,12 @@
+<div class="block rounded-lg shadow-lg bg-white max-w-sm text-center">
+  <%= form_with url: '/weather/current', method: :get do |form| %>
+    <div class="p-6">
+      <h5 class="text-gray-900 text-xl font-medium mb-4">Weather Lookup by Zip Code</h5>
+      <%= form.text_field :zip, placeholder: "US Zip Code", value: @zip %>
+    </div>
+    <div class="py-3 px-6 border-t border-gray-300 text-gray-600">
+      <%= form.submit "What's the Weather",
+        class: "inline-block px-6 py-2.5 bg-blue-600 text-white font-medium text-xs leading-tight uppercase rounded shadow-md hover:bg-blue-700 hover:shadow-lg focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0 active:bg-blue-800 active:shadow-lg transition duration-150 ease-in-out" %>
+    </div>
+  <% end %>
+</div>
